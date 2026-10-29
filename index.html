@@ -44,7 +44,7 @@
     p { color: var(--gray-500); }
     .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.91); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
     .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { font-weight: 700; letter-spacing: -.04em; font-size: 1.08rem; }
+    .brand { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -.02em; font-size: 1.25rem; color: var(--ink); display: flex; align-items: center; gap: 6px; }
     .brand span { color: #b87891; }
     .nav-links { display: flex; align-items: center; gap: 27px; font-size: .88rem; color: var(--gray-500); }
     .nav-links a:hover { color: #a65e7b; }
@@ -52,7 +52,7 @@
     .menu-toggle { display: none; background: none; border: 0; font-size: 1.5rem; color: var(--ink); cursor: pointer; }
     .hero { position: relative; overflow: hidden; padding: 88px 0 70px; background: radial-gradient(circle at 88% 18%, rgba(243,220,227,.82), transparent 29%), linear-gradient(120deg, #fff 25%, #fdf8fa 100%); }
     .hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 45px; align-items: center; }
-    .availability { display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid rgba(185,120,145,.25); background: rgba(255,255,255,.75); border-radius: 999px; color: var(--gray-700); font-size: .82rem; }
+    .availability { display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid rgba(185,120,145,.25); background: rgba(255,255,255,.75); border-radius: 999px; color: var(--gray-700); font-size: .82rem; margin-bottom: 15px; }
     .availability-dot { width: 8px; height: 8px; background: #8baf91; border-radius: 50%; box-shadow: 0 0 0 4px rgba(139,175,145,.13); }
     .hero h1 .accent { color: #b87891; font-style: italic; }
     .typing-line { min-height: 34px; color: var(--gray-700); font-weight: 600; margin-bottom: 17px; }
@@ -64,17 +64,21 @@
     .btn:hover { transform: translateY(-2px); }
     .btn-dark { background: var(--ink); color: white; }
     .btn-light { background: white; border-color: var(--line); color: var(--ink); }
-    .hero-art { position: relative; min-height: 390px; display: grid; place-items: center; }
-    .portrait-shape { width: min(100%, 350px); aspect-ratio: .82; border-radius: 48% 48% 28px 28px; background: linear-gradient(150deg, #f8e9ee, #e8c6d1); position: relative; overflow: hidden; box-shadow: var(--shadow); }
-    .portrait-shape::before { content: ''; position: absolute; width: 150px; height: 180px; border-radius: 48% 48% 45% 45%; background: #f4d8c9; left: 50%; top: 72px; transform: translateX(-50%); box-shadow: inset -12px -4px 0 rgba(172,112,125,.08); }
-    .portrait-shape::after { content: ''; position: absolute; width: 205px; height: 260px; border-radius: 48% 48% 15% 15%; background: #fffafc; left: 50%; bottom: -105px; transform: translateX(-50%); box-shadow: inset 0 9px 0 rgba(185,120,145,.12); }
-    .hair { position: absolute; z-index: 2; width: 170px; height: 205px; border-radius: 48% 48% 35% 35%; background: #514047; top: 49px; left: 50%; transform: translateX(-50%); }
-    .hair::after { content: ''; position: absolute; width: 155px; height: 155px; background: #f4d8c9; border-radius: 45% 45% 48% 48%; left: 8px; top: 45px; }
+    
+    /* Hero Art & Profile Photo Box styling */
+    .hero-art { position: relative; min-height: 390px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
+    .profile-pic-container { width: 180px; height: 180px; border-radius: 50%; border: 4px solid white; box-shadow: var(--shadow); overflow: hidden; background: #f0e2e6; display: grid; place-items: center; position: relative; }
+    .profile-pic-container img { width: 100%; height: 100%; object-fit: cover; }
+    .profile-placeholder-text { font-size: 0.75rem; color: var(--gray-500); text-align: center; padding: 10px; }
+
+    .portrait-shape { width: min(100%, 320px); aspect-ratio: .82; border-radius: 48% 48% 28px 28px; background: linear-gradient(150deg, #f8e9ee, #e8c6d1); position: relative; overflow: hidden; box-shadow: var(--shadow); display: none; }
+    
     .float-note { position: absolute; z-index: 3; padding: 15px 17px; border-radius: 17px; background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.9); box-shadow: var(--shadow); font-size: .83rem; animation: float 5s ease-in-out infinite; }
     .float-note strong { display: block; font-size: 1.15rem; color: var(--ink); }
-    .note-one { left: -6px; top: 70px; }
-    .note-two { right: -8px; bottom: 50px; animation-delay: -2s; }
+    .note-one { left: -10px; top: 40px; }
+    .note-two { right: -10px; bottom: 30px; animation-delay: -2s; }
     @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
     .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: white; }
     .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); }
     .stat { padding: 25px 18px; text-align: center; border-right: 1px solid var(--line); }
@@ -111,10 +115,13 @@
     .experience-details ul { padding-left: 19px; margin-bottom: 0; }
     .experience-details li { margin: 8px 0; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+    
+    /* Achievements section fix: prevent photo from zooming in too much */
     .achievements-section { background: var(--blush-light); }
-    .achievement-feature { display: grid; grid-template-columns: .85fr 1.15fr; border-radius: 26px; overflow: hidden; background: white; box-shadow: var(--shadow); border: 1px solid rgba(217,169,184,.25); }
-    .achievement-visual { min-height: 330px; padding: 25px; display: grid; place-items: center; background: linear-gradient(145deg, #f3dce3, #fdf8fa); }
-    .feature-photo { display: block; width: 100%; height: 100%; min-height: 330px; object-fit: cover; border-radius: 18px; box-shadow: var(--shadow); }
+    .achievement-feature { display: grid; grid-template-columns: .9fr 1.1fr; border-radius: 26px; overflow: hidden; background: white; box-shadow: var(--shadow); border: 1px solid rgba(217,169,184,.25); }
+    .achievement-visual { min-height: 350px; padding: 25px; display: grid; place-items: center; background: linear-gradient(145deg, #f3dce3, #fdf8fa); }
+    .feature-photo { display: block; width: 100%; height: auto; max-height: 360px; object-fit: contain; border-radius: 14px; background: #fff; padding: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); }
+    
     .feature-content { padding: clamp(25px, 5vw, 50px); align-self: center; }
     .feature-content p { margin-bottom: 20px; }
     .media-labels { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
@@ -141,8 +148,7 @@
     @media (max-width: 850px) {
       .hero-grid, .achievement-feature, .contact-grid { grid-template-columns: 1fr; }
       .hero { padding-top: 62px; }
-      .hero-art { min-height: 330px; max-width: 430px; width: 100%; margin: 0 auto; }
-      .portrait-shape { max-width: 290px; }
+      .hero-art { min-height: 280px; margin: 0 auto; }
       .service-grid { grid-template-columns: repeat(2,1fr); }
       .achievement-grid { grid-template-columns: 1fr; }
       .contact-grid { gap: 25px; }
@@ -165,16 +171,13 @@
       .exp-icon { width: 44px; height: 44px; border-radius: 13px; }
       .experience-details { padding: 0 20px 22px 73px; }
       .achievement-visual { min-height: 250px; }
-      .feature-photo { min-height: 220px; max-height: 340px; }
-      .note-one { left: 0; top: 28px; }
-      .note-two { right: 0; bottom: 18px; }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="#top">Shinzeya <span>Garcia.</span></a>
+      <a class="brand" href="#top">Shinzeya <span>Garcia</span></a>
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="#about">About</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#achievements">Achievements</a><a class="nav-cta" href="#contact">Let's Connect ↗</a>
@@ -192,8 +195,14 @@
           <p class="hero-copy">With over 10 years of experience across ride-hailing, delivery, and e-commerce, I bring together operational oversight, financial reconciliation, helpdesk configuration, and cross-functional leadership to execute complex special projects and help teams deliver consistent results.</p>
           <div class="hero-actions"><a class="btn btn-dark" href="#experience">Explore My Journey ↗</a><a class="btn btn-light" href="#contact">Get In Touch</a></div>
         </div>
-        <div class="hero-art reveal" aria-label="Decorative illustration">
-          <div class="portrait-shape"><div class="hair"></div></div>
+        
+        <!-- Professional Photo Space in Hero Section -->
+        <div class="hero-art reveal" aria-label="Profile photo container">
+          <div class="profile-pic-container">
+            <!-- Upload your professional portrait photo to GitHub named profile.jpg -->
+            <img src="profile.jpg" alt="Shinzeya Garcia" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="profile-placeholder-text" style="display:none;">Add profile.jpg to repository</div>
+          </div>
           <div class="float-note note-one"><strong>10+ years</strong><span>Professional experience</span></div>
           <div class="float-note note-two"><strong>People + Process</strong><span>Precision execution</span></div>
         </div>
@@ -228,7 +237,7 @@
     </div></section>
 
     <section class="achievements-section" id="achievements"><div class="container"><div class="section-intro reveal"><span class="eyebrow">Selected contributions</span><h2>Work that reflects my strengths.</h2><p>Pandemic response initiatives, regulatory reporting, external partnerships, and operational controls.</p></div>
-      <div class="achievement-feature reveal"><div class="achievement-visual"><img class="feature-photo" src="drive-to-win.jpg" alt="Angkas rider engagement campaign" loading="lazy"></div><div class="feature-content"><span class="eyebrow">Featured initiatives & partnerships</span><h3 style="font-family:'Playfair Display',Georgia,serif;font-size:2rem">Pandemic Response & Key External Alliances</h3><p><strong>Philippine Red Cross Partnership:</strong> Led end-to-end operations for the pandemic RT-PCR testing program, orchestrating a team across order-taking, refunds, escalations, driver logistics, and customer support.</p><p><strong>Strategic External Partnerships:</strong> Served as the primary operational point person for 2 government social agencies (SSS, Pag-IBIG), 1 fleet management company (Motorento), and 1 major gift voucher/rewards platform to streamline driver services and community benefits.</p><p>Angkas rider empowerment and community initiatives were covered by <strong>Manila Bulletin</strong> and <strong>Inquirer.net</strong>.</p><div class="media-labels"><a class="media-label" href="https://mb.com.ph/2023/11/12/angkas-launches-weekend-market-initiative" target="_blank" rel="noopener noreferrer">Read on Manila Bulletin ↗</a><a class="media-label" href="https://newsinfo.inquirer.net/1858354/angkas-empowers-riders-with-innovative-programs-bolsters-community-bonds" target="_blank" rel="noopener noreferrer">Read on Inquirer.net ↗</a></div></div></div>
+      <div class="achievement-feature reveal"><div class="achievement-visual"><img class="feature-photo" src="drive-to-win.jpg" alt="Angkas rider engagement campaign"></div><div class="feature-content"><span class="eyebrow">Featured initiatives & partnerships</span><h3 style="font-family:'Playfair Display',Georgia,serif;font-size:2rem">Pandemic Response & Key External Alliances</h3><p><strong>Philippine Red Cross Partnership:</strong> Led end-to-end operations for the pandemic RT-PCR testing program, orchestrating a team across order-taking, refunds, escalations, driver logistics, and customer support.</p><p><strong>Strategic External Partnerships:</strong> Served as the primary operational point person for 2 government social agencies (SSS, Pag-IBIG), 1 fleet management company (Motorento), and 1 major gift voucher/rewards platform to streamline driver services and community benefits.</p><p>Angkas rider empowerment and community initiatives were covered by <strong>Manila Bulletin</strong> and <strong>Inquirer.net</strong>[cite: 1].</p><div class="media-labels"><a class="media-label" href="https://mb.com.ph/2023/11/12/angkas-launches-weekend-market-initiative" target="_blank" rel="noopener noreferrer">Read on Manila Bulletin ↗</a><a class="media-label" href="https://newsinfo.inquirer.net/1858354/angkas-empowers-riders-with-innovative-programs-bolsters-community-bonds" target="_blank" rel="noopener noreferrer">Read on Inquirer.net ↗</a></div></div></div>
       <div class="achievement-grid">
         <article class="achievement-card reveal"><span class="big-number">200,000+</span><h3>Transactions audited monthly</h3><p>Audited and reconciled high-volume driver transactions against official Finance records.</p></article>
         <article class="achievement-card reveal"><span class="big-number">0</span><h3>Data discrepancies</h3><p>Prepared official driver masterlists with zero data discrepancies for government regulatory agency submissions.</p></article>
