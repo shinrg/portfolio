@@ -38,45 +38,50 @@
     h1, h2, h3, p { margin-top: 0; }
     h1, h2, h3 { line-height: 1.15; }
     h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; letter-spacing: -.035em; }
-    h1 { font-size: clamp(2.2rem, 5vw, 4.2rem); margin: 18px 0 18px; }
+    
+    /* Hero Typography Updates */
+    .hero-name { font-size: clamp(3.2rem, 7vw, 5.8rem); margin: 12px 0 16px; color: var(--ink); line-height: 1.05; }
+    .hero-name span { color: #b87891; font-style: italic; }
+    .hero-tagline { font-family: 'DM Sans', sans-serif; font-size: clamp(1.15rem, 2.2vw, 1.45rem); font-weight: 600; color: var(--gray-700); line-height: 1.4; margin-bottom: 20px; letter-spacing: -.01em; }
+    
     h2 { font-size: clamp(2.1rem, 4.5vw, 3.6rem); margin: 13px 0 18px; }
     h3 { font-size: 1.22rem; margin-bottom: 9px; }
     p { color: var(--gray-500); }
+    
     .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.91); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
     .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -.02em; font-size: 1.25rem; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+    .brand { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -.02em; font-size: 1.3rem; color: var(--ink); }
     .brand span { color: #b87891; }
     .nav-links { display: flex; align-items: center; gap: 27px; font-size: .88rem; color: var(--gray-500); }
     .nav-links a:hover { color: #a65e7b; }
     .nav-cta { padding: 10px 16px; background: var(--ink); color: white !important; border-radius: 999px; }
     .menu-toggle { display: none; background: none; border: 0; font-size: 1.5rem; color: var(--ink); cursor: pointer; }
-    .hero { position: relative; overflow: hidden; padding: 88px 0 70px; background: radial-gradient(circle at 88% 18%, rgba(243,220,227,.82), transparent 29%), linear-gradient(120deg, #fff 25%, #fdf8fa 100%); }
-    .hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 45px; align-items: center; }
-    .availability { display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid rgba(185,120,145,.25); background: rgba(255,255,255,.75); border-radius: 999px; color: var(--gray-700); font-size: .82rem; margin-bottom: 15px; }
+    
+    .hero { position: relative; overflow: hidden; padding: 70px 0 60px; background: radial-gradient(circle at 88% 18%, rgba(243,220,227,.82), transparent 29%), linear-gradient(120deg, #fff 25%, #fdf8fa 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 50px; align-items: center; }
+    .availability { display: inline-flex; align-items: center; gap: 9px; padding: 8px 14px; border: 1px solid rgba(185,120,145,.25); background: rgba(255,255,255,.85); border-radius: 999px; color: var(--gray-700); font-size: .82rem; margin-bottom: 10px; }
     .availability-dot { width: 8px; height: 8px; background: #8baf91; border-radius: 50%; box-shadow: 0 0 0 4px rgba(139,175,145,.13); }
-    .hero h1 .accent { color: #b87891; font-style: italic; }
-    .typing-line { min-height: 34px; color: var(--gray-700); font-weight: 600; margin-bottom: 17px; }
+    
+    .typing-line { min-height: 30px; color: #a65e7b; font-weight: 700; font-size: 1.05rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: .05em; }
     .typing-caret { display: inline-block; height: 1.1em; width: 2px; background: #b87891; vertical-align: middle; margin-left: 3px; animation: blink .8s step-end infinite; }
     @keyframes blink { 50% { opacity: 0; } }
-    .hero-copy { max-width: 650px; font-size: 1.05rem; }
+    .hero-copy { max-width: 620px; font-size: 1.05rem; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid transparent; border-radius: 999px; padding: 13px 20px; font-size: .9rem; font-weight: 700; transition: transform .2s, background .2s; cursor: pointer; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid transparent; border-radius: 999px; padding: 13px 22px; font-size: .9rem; font-weight: 700; transition: transform .2s, background .2s; cursor: pointer; }
     .btn:hover { transform: translateY(-2px); }
     .btn-dark { background: var(--ink); color: white; }
     .btn-light { background: white; border-color: var(--line); color: var(--ink); }
     
-    /* Hero Art & Profile Photo Box styling */
-    .hero-art { position: relative; min-height: 390px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
-    .profile-pic-container { width: 180px; height: 180px; border-radius: 50%; border: 4px solid white; box-shadow: var(--shadow); overflow: hidden; background: #f0e2e6; display: grid; place-items: center; position: relative; }
+    /* Doubled Profile Photo Container */
+    .hero-art { position: relative; width: 100%; display: flex; justify-content: center; align-items: center; }
+    .profile-pic-container { width: min(100%, 340px); aspect-ratio: 1; border-radius: 32px; border: 6px solid white; box-shadow: 0 20px 40px rgba(84, 58, 69, .15); overflow: hidden; background: #f0e2e6; display: grid; place-items: center; position: relative; }
     .profile-pic-container img { width: 100%; height: 100%; object-fit: cover; }
-    .profile-placeholder-text { font-size: 0.75rem; color: var(--gray-500); text-align: center; padding: 10px; }
+    .profile-placeholder-text { font-size: 0.85rem; color: var(--gray-500); text-align: center; padding: 20px; font-weight: 500; }
 
-    .portrait-shape { width: min(100%, 320px); aspect-ratio: .82; border-radius: 48% 48% 28px 28px; background: linear-gradient(150deg, #f8e9ee, #e8c6d1); position: relative; overflow: hidden; box-shadow: var(--shadow); display: none; }
-    
-    .float-note { position: absolute; z-index: 3; padding: 15px 17px; border-radius: 17px; background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.9); box-shadow: var(--shadow); font-size: .83rem; animation: float 5s ease-in-out infinite; }
+    .float-note { position: absolute; z-index: 3; padding: 14px 18px; border-radius: 17px; background: rgba(255,255,255,.95); border: 1px solid rgba(255,255,255,.9); box-shadow: var(--shadow); font-size: .83rem; animation: float 5s ease-in-out infinite; }
     .float-note strong { display: block; font-size: 1.15rem; color: var(--ink); }
-    .note-one { left: -10px; top: 40px; }
-    .note-two { right: -10px; bottom: 30px; animation-delay: -2s; }
+    .note-one { left: -15px; top: 20px; }
+    .note-two { right: -15px; bottom: 20px; animation-delay: -2.5s; }
     @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
     .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: white; }
@@ -116,7 +121,6 @@
     .experience-details li { margin: 8px 0; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
     
-    /* Achievements section fix: prevent photo from zooming in too much */
     .achievements-section { background: var(--blush-light); }
     .achievement-feature { display: grid; grid-template-columns: .9fr 1.1fr; border-radius: 26px; overflow: hidden; background: white; box-shadow: var(--shadow); border: 1px solid rgba(217,169,184,.25); }
     .achievement-visual { min-height: 350px; padding: 25px; display: grid; place-items: center; background: linear-gradient(145deg, #f3dce3, #fdf8fa); }
@@ -147,8 +151,8 @@
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
     @media (max-width: 850px) {
       .hero-grid, .achievement-feature, .contact-grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 62px; }
-      .hero-art { min-height: 280px; margin: 0 auto; }
+      .hero { padding-top: 50px; }
+      .hero-art { min-height: 320px; margin: 20px auto 0; }
       .service-grid { grid-template-columns: repeat(2,1fr); }
       .achievement-grid { grid-template-columns: 1fr; }
       .contact-grid { gap: 25px; }
@@ -161,7 +165,7 @@
       .nav-links.open { display: flex; }
       .nav-links a { padding: 12px 0; }
       .nav-cta { text-align: center; margin-top: 8px; padding: 11px 16px !important; }
-      .hero { padding: 53px 0 42px; }
+      .hero { padding: 40px 0 30px; }
       section { padding: 65px 0; }
       .stats-grid { grid-template-columns: 1fr; }
       .stat { border-right: 0; border-bottom: 1px solid var(--line); padding: 18px; }
@@ -190,18 +194,25 @@
       <div class="container hero-grid">
         <div class="reveal">
           <div class="availability"><span class="availability-dot"></span> Available for remote opportunities · Flexible time zones</div>
-          <h1>Operations Leadership • Administrative Coordination • Financial Controls & Reconciliation • Special Projects • Customer Experience</h1>
-          <div class="typing-line">I specialize in <span id="typedText">Operations Coordination</span><span class="typing-caret"></span></div>
+          
+          <!-- Name as Main Headline -->
+          <h1 class="hero-name">Shinzeya <span>Garcia</span></h1>
+          
+          <!-- Headline as Clean Tagline -->
+          <div class="hero-tagline">Operations Leadership • Administrative Coordination • Financial Controls & Reconciliation • Special Projects • Customer Experience</div>
+          
+          <div class="typing-line">Specializing in <span id="typedText">Operations Coordination</span><span class="typing-caret"></span></div>
+          
           <p class="hero-copy">With over 10 years of experience across ride-hailing, delivery, and e-commerce, I bring together operational oversight, financial reconciliation, helpdesk configuration, and cross-functional leadership to execute complex special projects and help teams deliver consistent results.</p>
+          
           <div class="hero-actions"><a class="btn btn-dark" href="#experience">Explore My Journey ↗</a><a class="btn btn-light" href="#contact">Get In Touch</a></div>
         </div>
         
-        <!-- Professional Photo Space in Hero Section -->
+        <!-- Expanded Profile Photo Space -->
         <div class="hero-art reveal" aria-label="Profile photo container">
           <div class="profile-pic-container">
-            <!-- Upload your professional portrait photo to GitHub named profile.jpg -->
             <img src="profile.jpg" alt="Shinzeya Garcia" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="profile-placeholder-text" style="display:none;">Add profile.jpg to repository</div>
+            <div class="profile-placeholder-text" style="display:none;">Upload profile.jpg to repository</div>
           </div>
           <div class="float-note note-one"><strong>10+ years</strong><span>Professional experience</span></div>
           <div class="float-note note-two"><strong>People + Process</strong><span>Precision execution</span></div>
