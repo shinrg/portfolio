@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3dce3" />
+  <meta name="description" content="Shinzeya Garcia — Operations, Financial Controls, Compliance, Special Projects, and Customer Experience professional with 10+ years of experience." />
+  <title>Shinzeya Garcia | Operations & Financial Controls</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blush: #f3dce3;
+      --blush-light: #fbf2f5;
+      --blush-deep: #d9a9b8;
+      --white: #ffffff;
+      --gray-50: #f8f7f7;
+      --gray-100: #e8e6e7;
+      --gray-300: #c9c3c6;
+      --gray-500: #81777c;
+      --gray-700: #51464b;
+      --ink: #342b30;
+      --line: rgba(81, 70, 75, .14);
+      --shadow: 0 18px 55px rgba(84, 58, 69, .09);
+      --radius: 22px;
+      --max-width: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; color: var(--ink); background: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    .container { width: min(var(--max-width), calc(100% - 42px)); margin: 0 auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--gray-500); text-transform: uppercase; letter-spacing: .14em; font-size: .74rem; font-weight: 700; }
+    .eyebrow::before { content: ''; width: 23px; height: 1px; background: var(--blush-deep); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.15; }
+    h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; letter-spacing: -.035em; }
+    h1 { font-size: clamp(2.2rem, 5vw, 4.2rem); margin: 18px 0 18px; }
+    h2 { font-size: clamp(2.1rem, 4.5vw, 3.6rem); margin: 13px 0 18px; }
+    h3 { font-size: 1.22rem; margin-bottom: 9px; }
+    p { color: var(--gray-500); }
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.91); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 700; letter-spacing: -.04em; font-size: 1.08rem; }
+    .brand span { color: #b87891; }
+    .nav-links { display: flex; align-items: center; gap: 27px; font-size: .88rem; color: var(--gray-500); }
+    .nav-links a:hover { color: #a65e7b; }
+    .nav-cta { padding: 10px 16px; background: var(--ink); color: white !important; border-radius: 999px; }
+    .menu-toggle { display: none; background: none; border: 0; font-size: 1.5rem; color: var(--ink); cursor: pointer; }
+    .hero { position: relative; overflow: hidden; padding: 88px 0 70px; background: radial-gradient(circle at 88% 18%, rgba(243,220,227,.82), transparent 29%), linear-gradient(120deg, #fff 25%, #fdf8fa 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 45px; align-items: center; }
+    .availability { display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid rgba(185,120,145,.25); background: rgba(255,255,255,.75); border-radius: 999px; color: var(--gray-700); font-size: .82rem; }
+    .availability-dot { width: 8px; height: 8px; background: #8baf91; border-radius: 50%; box-shadow: 0 0 0 4px rgba(139,175,145,.13); }
+    .hero h1 .accent { color: #b87891; font-style: italic; }
+    .typing-line { min-height: 34px; color: var(--gray-700); font-weight: 600; margin-bottom: 17px; }
+    .typing-caret { display: inline-block; height: 1.1em; width: 2px; background: #b87891; vertical-align: middle; margin-left: 3px; animation: blink .8s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .hero-copy { max-width: 650px; font-size: 1.05rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid transparent; border-radius: 999px; padding: 13px 20px; font-size: .9rem; font-weight: 700; transition: transform .2s, background .2s; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-dark { background: var(--ink); color: white; }
+    .btn-light { background: white; border-color: var(--line); color: var(--ink); }
+    .hero-art { position: relative; min-height: 390px; display: grid; place-items: center; }
+    .portrait-shape { width: min(100%, 350px); aspect-ratio: .82; border-radius: 48% 48% 28px 28px; background: linear-gradient(150deg, #f8e9ee, #e8c6d1); position: relative; overflow: hidden; box-shadow: var(--shadow); }
+    .portrait-shape::before { content: ''; position: absolute; width: 150px; height: 180px; border-radius: 48% 48% 45% 45%; background: #f4d8c9; left: 50%; top: 72px; transform: translateX(-50%); box-shadow: inset -12px -4px 0 rgba(172,112,125,.08); }
+    .portrait-shape::after { content: ''; position: absolute; width: 205px; height: 260px; border-radius: 48% 48% 15% 15%; background: #fffafc; left: 50%; bottom: -105px; transform: translateX(-50%); box-shadow: inset 0 9px 0 rgba(185,120,145,.12); }
+    .hair { position: absolute; z-index: 2; width: 170px; height: 205px; border-radius: 48% 48% 35% 35%; background: #514047; top: 49px; left: 50%; transform: translateX(-50%); }
+    .hair::after { content: ''; position: absolute; width: 155px; height: 155px; background: #f4d8c9; border-radius: 45% 45% 48% 48%; left: 8px; top: 45px; }
+    .float-note { position: absolute; z-index: 3; padding: 15px 17px; border-radius: 17px; background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.9); box-shadow: var(--shadow); font-size: .83rem; animation: float 5s ease-in-out infinite; }
+    .float-note strong { display: block; font-size: 1.15rem; color: var(--ink); }
+    .note-one { left: -6px; top: 70px; }
+    .note-two { right: -8px; bottom: 50px; animation-delay: -2s; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: white; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); }
+    .stat { padding: 25px 18px; text-align: center; border-right: 1px solid var(--line); }
+    .stat:last-child { border-right: 0; }
+    .stat strong { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.8rem; color: var(--ink); }
+    .stat span { font-size: .8rem; color: var(--gray-500); }
+    .marquee { overflow: hidden; background: var(--blush-light); padding: 15px 0; color: #9b657a; font-size: .82rem; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
+    .marquee-track { display: inline-flex; gap: 30px; min-width: max-content; animation: marquee 32s linear infinite; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    section { padding: 92px 0; }
+    .section-intro { max-width: 680px; margin-bottom: 38px; }
+    .section-intro p { max-width: 610px; }
+    .about-copy p { font-size: 1.05rem; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 23px; }
+    .pill { border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; color: var(--gray-700); font-size: .82rem; background: white; }
+    .services-section { background: var(--gray-50); }
+    .service-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .service-card { padding: 25px; background: white; border: 1px solid var(--line); border-radius: var(--radius); transition: transform .2s, box-shadow .2s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .service-number { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 14px; background: var(--blush-light); color: #a65e7b; font-weight: 700; margin-bottom: 23px; }
+    .service-card p { font-size: .9rem; margin-bottom: 0; }
+    .timeline { display: grid; gap: 14px; }
+    .experience-item { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: white; }
+    .experience-toggle { display: grid; grid-template-columns: 56px 1fr auto; align-items: center; gap: 17px; padding: 22px; width: 100%; border: 0; background: white; text-align: left; cursor: pointer; color: var(--ink); }
+    .experience-toggle:hover { background: #fffafb; }
+    .exp-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--blush-light); color: #a65e7b; font-weight: 700; }
+    .exp-meta { color: var(--gray-500); font-size: .82rem; }
+    .exp-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 3px; }
+    .exp-summary { color: var(--gray-500); font-size: .9rem; }
+    .chevron { color: #a65e7b; font-size: 1.2rem; transition: transform .2s; }
+    .experience-item.open .chevron { transform: rotate(180deg); }
+    .experience-details { display: none; padding: 0 28px 25px 95px; color: var(--gray-500); font-size: .92rem; }
+    .experience-item.open .experience-details { display: block; animation: fadeIn .25s ease; }
+    .experience-details ul { padding-left: 19px; margin-bottom: 0; }
+    .experience-details li { margin: 8px 0; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+    .achievements-section { background: var(--blush-light); }
+    .achievement-feature { display: grid; grid-template-columns: .85fr 1.15fr; border-radius: 26px; overflow: hidden; background: white; box-shadow: var(--shadow); border: 1px solid rgba(217,169,184,.25); }
+    .achievement-visual { min-height: 330px; padding: 25px; display: grid; place-items: center; background: linear-gradient(145deg, #f3dce3, #fdf8fa); }
+    .feature-photo { display: block; width: 100%; height: 100%; min-height: 330px; object-fit: cover; border-radius: 18px; box-shadow: var(--shadow); }
+    .feature-content { padding: clamp(25px, 5vw, 50px); align-self: center; }
+    .feature-content p { margin-bottom: 20px; }
+    .media-labels { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .media-label { border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-size: .82rem; color: var(--gray-700); background: var(--gray-50); }
+    .achievement-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; margin-top: 18px; }
+    .achievement-card { background: white; border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+    .achievement-card .big-number { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; color: #a65e7b; margin-bottom: 10px; }
+    .achievement-card p { font-size: .88rem; margin-bottom: 0; }
+    .contact-section { background: var(--ink); color: white; }
+    .contact-section .eyebrow, .contact-section p { color: #d0c4ca; }
+    .contact-section h2 { color: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr .8fr; gap: 55px; align-items: center; }
+    .contact-details { display: grid; gap: 12px; }
+    .contact-link { display: flex; gap: 13px; align-items: center; padding: 15px 17px; border: 1px solid rgba(255,255,255,.14); border-radius: 15px; color: white; overflow-wrap: anywhere; }
+    .contact-link:hover { background: rgba(255,255,255,.07); }
+    .contact-icon { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 38px; border-radius: 12px; background: rgba(243,220,227,.14); color: #f3dce3; }
+    .contact-label { display: block; color: #c0b3b9; font-size: .75rem; }
+    .contact-value { font-size: .9rem; }
+    footer { background: #2b2327; color: #c0b3b9; padding: 21px 0; font-size: .8rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 850px) {
+      .hero-grid, .achievement-feature, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 62px; }
+      .hero-art { min-height: 330px; max-width: 430px; width: 100%; margin: 0 auto; }
+      .portrait-shape { max-width: 290px; }
+      .service-grid { grid-template-columns: repeat(2,1fr); }
+      .achievement-grid { grid-template-columns: 1fr; }
+      .contact-grid { gap: 25px; }
+    }
+    @media (max-width: 650px) {
+      .container { width: min(var(--max-width), calc(100% - 30px)); }
+      .nav { min-height: 67px; }
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 67px; left: 0; right: 0; background: white; padding: 17px 22px 22px; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; }
+      .nav-cta { text-align: center; margin-top: 8px; padding: 11px 16px !important; }
+      .hero { padding: 53px 0 42px; }
+      section { padding: 65px 0; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat { border-right: 0; border-bottom: 1px solid var(--line); padding: 18px; }
+      .stat:last-child { border-bottom: 0; }
+      .service-grid { grid-template-columns: 1fr; }
+      .experience-toggle { grid-template-columns: 45px 1fr auto; gap: 12px; padding: 16px; }
+      .exp-icon { width: 44px; height: 44px; border-radius: 13px; }
+      .experience-details { padding: 0 20px 22px 73px; }
+      .achievement-visual { min-height: 250px; }
+      .feature-photo { min-height: 220px; max-height: 340px; }
+      .note-one { left: 0; top: 28px; }
+      .note-two { right: 0; bottom: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">Shinzeya <span>Garcia.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#achievements">Achievements</a><a class="nav-cta" href="#contact">Let's Connect ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="availability"><span class="availability-dot"></span> Available for remote opportunities · Flexible time zones</div>
+          <h1>Operations Leadership • Administrative Coordination • Financial Controls & Reconciliation • Special Projects • Customer Experience</h1>
+          <div class="typing-line">I specialize in <span id="typedText">Operations Coordination</span><span class="typing-caret"></span></div>
+          <p class="hero-copy">With over 10 years of experience across ride-hailing, delivery, and e-commerce, I bring together operational oversight, financial reconciliation, helpdesk configuration, and cross-functional leadership to execute complex special projects and help teams deliver consistent results.</p>
+          <div class="hero-actions"><a class="btn btn-dark" href="#experience">Explore My Journey ↗</a><a class="btn btn-light" href="#contact">Get In Touch</a></div>
+        </div>
+        <div class="hero-art reveal" aria-label="Decorative illustration">
+          <div class="portrait-shape"><div class="hair"></div></div>
+          <div class="float-note note-one"><strong>10+ years</strong><span>Professional experience</span></div>
+          <div class="float-note note-two"><strong>People + Process</strong><span>Precision execution</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats"><div class="container stats-grid"><div class="stat"><strong>10+ years</strong><span>Professional experience</span></div><div class="stat"><strong>End-to-End</strong><span>Special projects execution</span></div><div class="stat"><strong>Detail-driven</strong><span>Reporting & reconciliation</span></div></div></div>
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Operations Coordination ✳ Financial Controls & Reconciliation ✳ Special Projects Execution ✳ Government Regulatory Reporting ✳ Helpdesk Administration ✳ Team Leadership ✳ E-commerce Support ✳ </span><span>Operations Coordination ✳ Financial Controls & Reconciliation ✳ Special Projects Execution ✳ Government Regulatory Reporting ✳ Helpdesk Administration ✳ Team Leadership ✳ E-commerce Support ✳ </span></div></div>
+
+    <section id="about"><div class="container">
+      <div class="about-copy reveal"><span class="eyebrow">Get to know me</span><h2>Experience with a human touch & analytical rigor.</h2><p>With over 10 years of professional experience across ride-hailing, delivery, and e-commerce, I specialize in streamlining operational workflows, managing high-volume data reconciliation, and coordinating cross-functional teams.</p><p>My background spans end-to-end special projects execution, government regulatory compliance reporting, financial budget tracking, Zendesk and Freshdesk administration, and multi-channel customer experience management. I focus on accuracy, clear communication, and practical solutions that turn organizational goals into seamless operational execution.</p><div class="pill-row"><span class="pill">Operations Coordination</span><span class="pill">Financial Controls & Reconciliation</span><span class="pill">Special Projects Execution</span><span class="pill">Regulatory Compliance</span><span class="pill">Helpdesk Configuration</span></div></div>
+    </div></section>
+
+    <section class="services-section" id="services"><div class="container"><div class="section-intro reveal"><span class="eyebrow">What I can help with</span><h2>Services & strengths.</h2><p>A practical mix of customer experience leadership, administrative oversight, operational reporting, and financial controls.</p></div>
+      <div class="service-grid">
+        <article class="service-card reveal"><span class="service-number">01</span><h3>Operations & Administrative Support</h3><p>Workflow optimization, administrative oversight, records management, task tracking, and day-to-day operations coordination.</p></article>
+        <article class="service-card reveal"><span class="service-number">02</span><h3>Special Projects & Partnerships</h3><p>End-to-end management of large-scale initiatives, external partner integrations (fleet, government social agencies, voucher programs), and field logistics.</p></article>
+        <article class="service-card reveal"><span class="service-number">03</span><h3>Financial Reconciliation & Controls</h3><p>High-volume transaction auditing, budget tracking, spend efficiency, cost variance analysis, and finance department coordination.</p></article>
+        <article class="service-card reveal"><span class="service-number">04</span><h3>Reporting & Regulatory Compliance</h3><p>Official masterlist validation, management performance reporting, regulatory submissions for government agencies, and accuracy checks.</p></article>
+        <article class="service-card reveal"><span class="service-number">05</span><h3>Helpdesk & Ticketing Administration</h3><p>Configuring Zendesk and Freshdesk ticket routing, permissions, automated triggers, chatbot settings, and multi-channel social integrations.</p></article>
+        <article class="service-card reveal"><span class="service-number">06</span><h3>Customer Experience & Team Leadership</h3><p>Managing service operations, handling complex escalations, leading multi-location teams, and setting service quality standards.</p></article>
+      </div>
+    </div></section>
+
+    <section id="experience"><div class="container"><div class="section-intro reveal"><span class="eyebrow">Where I've made a difference</span><h2>My professional journey.</h2><p>A high-level summary of my roles, core responsibilities, and contributions.</p></div>
+      <div class="timeline">
+        <article class="experience-item open reveal"><button class="experience-toggle" aria-expanded="true"><span class="exp-icon">01</span><span><span class="exp-title">Operations Data Supervisor</span><br><span class="exp-meta">ANGKAS · July 2022 – July 2026</span><br><span class="exp-summary">Regulatory reporting, financial reconciliation, operational spending controls, and dashboard metrics definition.</span></span><span class="chevron">⌄</span></button><div class="experience-details"><p>Spearheaded operational reporting, regulatory compliance for government agencies, financial reconciliation, and partner management.</p><ul><li>Prepared weekly and monthly management reports on operational metrics; maintained driver records for government regulatory reporting.</li><li>Audited high-volume driver transactions, reconciled spending against official Finance records, and monitored budgets and cost variances.</li><li>Oversaw incentive spend efficiency, commission program economics, and ensured audit-ready financial records.</li><li>Defined reporting metrics, logic, and access requirements for dashboards in collaboration with technical teams.</li><li>Managed operational partnerships with Motorento, SSS, and Pag-IBIG, handling fleet records, payment coordination, and implementation.</li></ul></div></article>
+        <article class="experience-item reveal"><button class="experience-toggle" aria-expanded="false"><span class="exp-icon">02</span><span><span class="exp-title">Customer Service Supervisor</span><br><span class="exp-meta">ANGKAS · November 2018 – July 2022</span><br><span class="exp-summary">Team leadership, Zendesk/Freshdesk administration, special projects, and strategic partnerships.</span></span><span class="chevron">⌄</span></button><div class="experience-details"><p>Led a 45-member team across customer service and special projects, optimizing service delivery and executing operational partnerships.</p><ul><li>Led a 45-member Customer Service and Special Projects team across locations, overseeing schedules, SLA performance, and project execution.</li><li>Administered Zendesk and Freshdesk configurations, including ticket routing, permissions, triggers, chatbots, and social integrations.</li><li>Managed operational execution of the Philippine Red Cross RT-PCR testing partnership during the pandemic.</li><li>Supported B2B delivery partnerships, field audits, driver service quality checks, and venue logistics for customer acquisition.</li><li>Managed driver community communication channels on Telegram for operational updates and concern escalations.</li></ul></div></article>
+        <article class="experience-item reveal"><button class="experience-toggle" aria-expanded="false"><span class="exp-icon">03</span><span><span class="exp-title">Customer Service Specialist</span><br><span class="exp-meta">ANGKAS · June 2017 – November 2018</span><br><span class="exp-summary">Issue resolution, emergency incident response, and driver community engagement.</span></span><span class="chevron">⌄</span></button><div class="experience-details"><p>Handled complex customer and driver inquiries, fraud-related cases, and critical incident response.</p><ul><li>Resolved complaints, refunds, financial disputes, and compliance cases across walk-in, phone, and email channels.</li><li>Served as a founding member of the Emergency Response Team (ERT), managing triage and escalation of urgent driver and customer incidents.</li><li>Supported driver acquisition, community engagement, and recurring driver leadership events.</li></ul></div></article>
+        <article class="experience-item reveal"><button class="experience-toggle" aria-expanded="false"><span class="exp-icon">04</span><span><span class="exp-title">Subject Matter Expert / Operations Associate – Cross-Border Operations</span><br><span class="exp-meta">LAZADA · September 2015 – June 2017</span><br><span class="exp-summary">Tier 2 back-office operations, ticket auditing, and workflow optimization.</span></span><span class="chevron">⌄</span></button><div class="experience-details"><p>Supported back-office merchant and customer support operations, ensuring high service quality and procedural compliance.</p><ul><li>Handled Tier 2 back-office escalations requiring deep investigation.</li><li>Processed and reviewed ~500 weekly records, maintaining operational reports and identifying workflow bottlenecks.</li><li>Audited support tickets to support service quality and process consistency.</li></ul></div></article>
+      </div>
+    </div></section>
+
+    <section class="achievements-section" id="achievements"><div class="container"><div class="section-intro reveal"><span class="eyebrow">Selected contributions</span><h2>Work that reflects my strengths.</h2><p>Pandemic response initiatives, regulatory reporting, external partnerships, and operational controls.</p></div>
+      <div class="achievement-feature reveal"><div class="achievement-visual"><img class="feature-photo" src="drive-to-win.jpg" alt="Angkas rider engagement campaign" loading="lazy"></div><div class="feature-content"><span class="eyebrow">Featured initiatives & partnerships</span><h3 style="font-family:'Playfair Display',Georgia,serif;font-size:2rem">Pandemic Response & Key External Alliances</h3><p><strong>Philippine Red Cross Partnership:</strong> Led end-to-end operations for the pandemic RT-PCR testing program, orchestrating a team across order-taking, refunds, escalations, driver logistics, and customer support.</p><p><strong>Strategic External Partnerships:</strong> Served as the primary operational point person for 2 government social agencies (SSS, Pag-IBIG), 1 fleet management company (Motorento), and 1 major gift voucher/rewards platform to streamline driver services and community benefits.</p><p>Angkas rider empowerment and community initiatives were covered by <strong>Manila Bulletin</strong> and <strong>Inquirer.net</strong>.</p><div class="media-labels"><a class="media-label" href="https://mb.com.ph/2023/11/12/angkas-launches-weekend-market-initiative" target="_blank" rel="noopener noreferrer">Read on Manila Bulletin ↗</a><a class="media-label" href="https://newsinfo.inquirer.net/1858354/angkas-empowers-riders-with-innovative-programs-bolsters-community-bonds" target="_blank" rel="noopener noreferrer">Read on Inquirer.net ↗</a></div></div></div>
+      <div class="achievement-grid">
+        <article class="achievement-card reveal"><span class="big-number">200,000+</span><h3>Transactions audited monthly</h3><p>Audited and reconciled high-volume driver transactions against official Finance records.</p></article>
+        <article class="achievement-card reveal"><span class="big-number">0</span><h3>Data discrepancies</h3><p>Prepared official driver masterlists with zero data discrepancies for government regulatory agency submissions.</p></article>
+        <article class="achievement-card reveal"><span class="big-number">45</span><h3>Team members led</h3><p>Managed a 45-member multi-location team across customer service, operations, and special projects.</p></article>
+      </div>
+    </div></section>
+
+    <section class="contact-section" id="contact"><div class="container contact-grid"><div class="reveal"><span class="eyebrow">Have an opportunity in mind?</span><h2>Let's make good things happen.</h2><p>I am open to remote opportunities and projects where I can contribute my experience in operations coordination, financial reconciliation, helpdesk administration, compliance, and team leadership.</p><p>Flexible hours · Open to different time zones · Remote friendly</p><a class="btn btn-light" href="mailto:shinzeyagarcia@gmail.com">Email Me ↗</a></div><div class="contact-details reveal"><a class="contact-link" href="mailto:shinzeyagarcia@gmail.com"><span class="contact-icon">✉</span><span><span class="contact-label">Email</span><span class="contact-value">shinzeyagarcia@gmail.com</span></span></a><a class="contact-link" href="tel:+971582880119"><span class="contact-icon">☎</span><span><span class="contact-label">Mobile (UAE)</span><span class="contact-value">+971 58 288 0119</span></span></a><a class="contact-link" href="tel:+639953543395"><span class="contact-icon">☎</span><span><span class="contact-label">Mobile (PH)</span><span class="contact-value">+63 995 354 3395</span></span></a><div class="contact-link"><span class="contact-icon">◷</span><span><span class="contact-label">Availability</span><span class="contact-value">Flexible hours · Remote · Open to time zones</span></span></div></div></div></section>
+  </main>
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Shinzeya Garcia</span><span>Built with care, curiosity, and a little creativity.</span><a href="#top">Back to top ↑</a></div></footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.textContent = isOpen ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.textContent = '☰';
+    }));
+    document.querySelectorAll('.experience-toggle').forEach(button => button.addEventListener('click', () => {
+      const item = button.closest('.experience-item');
+      const wasOpen = item.classList.contains('open');
+      item.classList.toggle('open', !wasOpen);
+      button.setAttribute('aria-expanded', String(!wasOpen));
+    }));
+    const words = ['Operations Coordination', 'Financial Reconciliation', 'Special Projects', 'Helpdesk Administration', 'Customer Experience'];
+    const typedText = document.getElementById('typedText');
+    let wordIndex = 0, charIndex = words[0].length, deleting = true;
+    function typeLoop() {
+      const current = words[wordIndex];
+      if (deleting) { charIndex--; } else { charIndex++; }
+      typedText.textContent = current.substring(0, charIndex);
+      let delay = deleting ? 45 : 75;
+      if (!deleting && charIndex === current.length) { deleting = true; delay = 1500; }
+      else if (deleting && charIndex === 0) { deleting = false; wordIndex = (wordIndex + 1) % words.length; delay = 350; }
+      setTimeout(typeLoop, delay);
+    }
+    setTimeout(typeLoop, 2200);
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
